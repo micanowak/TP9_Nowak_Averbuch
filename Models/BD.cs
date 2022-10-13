@@ -17,16 +17,44 @@ namespace TP9_Nowak_Averbuch.Models
         }
 
         public static void Disponibilidad(int idReserva){
+            Reserva posibleReserva = new Reserva();
             bool seReserva = true;
-            string SQL = "SELECT * FROM Reserva WHERE IdPregunta = @pidReserva";
+            int maxReservaID;
+            List<DateTime> ListaFechas = new List<DateTime>();
+            string SQL = "SELECT * FROM Reserva WHERE IdReserva = @pidReserva";
             using(SqlConnection db = new SqlConnection(_ConnectionString)){
                 posibleReserva = db.QueryFirstOrDefault<Reserva>(SQL, new{pidReserva = idReserva});
             }
+
+            SQL = "SELECT TOP 1 IdReserva FROM Reserva WHERE fkHotel = @pfkHotel and fkHabitacion = @pfkhab order by IdReserva DESC";
+            using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                maxReservaID = db.QueryFirstOrDefault<int>(SQL, new{pfkHotel = posibleReserva.fkHotel, pfkhab = posibleReserva.fkHabitacion});
+            }
             
-            string SQL = "UPDATE Jugadores SET ComodinDobleChance = 0 WHERE IdJugador = @pIdJugador";
+            for(int i = 1; i<= maxReservaID; i++){
+                SQL = "SELECT fechaIN,fechaOUT FROM Reserva WHERE fkHotel = @pfkHotel and fkHabitacion = @pfkhab";
+                using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                ListaFechas = db.Query<DateTime>(SQL, new{pfkHotel = posibleReserva.fkHotel, pfkhab = posibleReserva.fkHabitacion}).ToList();
+            }
+
+            List<DateTime> listaNueva = new List<DateTime>();
+
+            for (int i2 = 0; i2 < ListaFechas.Count; i2++)
+            {
+                if (!(listaNueva.Contains(ListaFechas[i2])))
+                {
+                    listaNueva.Add(ListaFechas[i]);
+                }
+            }
+
+            if(ListaFechas.Count == listaNueva.Count){
+
+            }
+                SQL = "UPDATE Jugadores SET ComodinDobleChance = 0 WHERE IdJugador = @pIdJugador";
                 using(SqlConnection db = new SqlConnection(_ConnectionString)){
                 db.Execute(SQL, new{pIdJugador = _Player.IdJugador});
                 }
+            }
         }
     }
 }
