@@ -9,5 +9,6 @@ namespace TP9_Nowak_Averbuch.Models
     {
         private static string _ConnectionString = @"Server=A-PHZ2-CIDI-052;DataBase=JuegoQQSM;Trusted_Connection=True;";
 
+        private;
     }
 }
