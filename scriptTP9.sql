@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [scriptTP9]    Script Date: 13/10/2022 10:35:56 ******/
+/****** Object:  Database [scriptTP9]    Script Date: 13/10/2022 11:32:51 ******/
 CREATE DATABASE [scriptTP9]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [scriptTP9] SET QUERY_STORE = OFF
 GO
 USE [scriptTP9]
 GO
-/****** Object:  User [alumno]    Script Date: 13/10/2022 10:35:56 ******/
+/****** Object:  User [alumno]    Script Date: 13/10/2022 11:32:51 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Foto]    Script Date: 13/10/2022 10:35:56 ******/
+/****** Object:  Table [dbo].[Foto]    Script Date: 13/10/2022 11:32:51 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Foto](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Habitacion]    Script Date: 13/10/2022 10:35:56 ******/
+/****** Object:  Table [dbo].[Habitacion]    Script Date: 13/10/2022 11:32:51 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -114,7 +114,7 @@ CREATE TABLE [dbo].[Habitacion](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Hotel]    Script Date: 13/10/2022 10:35:56 ******/
+/****** Object:  Table [dbo].[Hotel]    Script Date: 13/10/2022 11:32:51 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -129,7 +129,7 @@ CREATE TABLE [dbo].[Hotel](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Nivel]    Script Date: 13/10/2022 10:35:56 ******/
+/****** Object:  Table [dbo].[Nivel]    Script Date: 13/10/2022 11:32:51 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -143,7 +143,22 @@ CREATE TABLE [dbo].[Nivel](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Reserva]    Script Date: 13/10/2022 10:35:56 ******/
+/****** Object:  Table [dbo].[NoDisponibilidad]    Script Date: 13/10/2022 11:32:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[NoDisponibilidad](
+	[IdNoDisponible] [int] IDENTITY(1,1) NOT NULL,
+	[fechaDia] [date] NOT NULL,
+	[fkHabitacion] [int] NOT NULL,
+ CONSTRAINT [PK_NoDisponibilidad] PRIMARY KEY CLUSTERED 
+(
+	[IdNoDisponible] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Reserva]    Script Date: 13/10/2022 11:32:51 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -190,6 +205,11 @@ INSERT [dbo].[Nivel] ([IdNivel], [nivel]) VALUES (1, N'Economico')
 INSERT [dbo].[Nivel] ([IdNivel], [nivel]) VALUES (2, N'Standar')
 INSERT [dbo].[Nivel] ([IdNivel], [nivel]) VALUES (3, N'Premium')
 SET IDENTITY_INSERT [dbo].[Nivel] OFF
+GO
+SET IDENTITY_INSERT [dbo].[NoDisponibilidad] ON 
+
+INSERT [dbo].[NoDisponibilidad] ([IdNoDisponible], [fechaDia], [fkHabitacion]) VALUES (1, CAST(N'2022-11-25' AS Date), 2)
+SET IDENTITY_INSERT [dbo].[NoDisponibilidad] OFF
 GO
 USE [master]
 GO
