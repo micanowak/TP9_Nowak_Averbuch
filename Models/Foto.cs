@@ -10,9 +10,9 @@ namespace TP9_Nowak_Averbuch.Models
         public string Nombre{get {return _Nombre;} set {_Nombre = value;}}
 
        
-        public Foto(int IdFoto, string Nombre){
-            idF = _IdFoto;
-            nom = _Nombre ;
+        public Foto(int idF, string nom){
+           _IdFoto = idF;
+            _Nombre = nom ;
         }
         public Foto(){}
     }

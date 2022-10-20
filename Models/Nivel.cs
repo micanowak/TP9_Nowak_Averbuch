@@ -10,9 +10,9 @@ namespace TP9_Nowak_Averbuch.Models
         public string StatusNivel{get {return _StatusNivel;} set {_StatusNivel = value;}}
 
        
-        public Nivel(int IdNivel, string StatusNivel){
-            idN = _IdNivel;
-            niv = _StatusNivel ;
+        public Nivel(int  idN , string status){
+            _IdNivel =  idN ; 
+            _StatusNivel = status;
         }
         public Nivel(){}
     }

@@ -17,13 +17,13 @@ namespace TP9_Nowak_Averbuch.Models
         public int FkNivel{ get {return _FkNivel;} set {_FkNivel = value;}}
         public int FkHotel{ get {return _FkHotel;} set {_FkHotel = value;}}
        
-        public Habitacion(int IdHabitacion, int Piso, int Precio, string Nombre, int FkNivel, int FkHotel){
-            idN = _IdHabitacion;
-            pis = _Piso;
-            pre = _Precio;
-            nom = _Nombre ;
-            fkN = _FkNivel;
-            fkH = _FkHotel;
+        public Habitacion(int idN, int piso, int pre, string nom, int fkN, int fkH){
+            _IdHabitacion = idN;
+            _Piso = piso;
+            _Precio = pre;
+            _Nombre = nom;
+            _FkNivel = fkN;
+            _FkHotel = fkH;
         }
         public Habitacion(){}
     }

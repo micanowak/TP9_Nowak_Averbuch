@@ -13,10 +13,10 @@ namespace TP9_Nowak_Averbuch.Models
         public string Nombre{get {return _Nombre;} set {_Nombre = value;}}
 
        
-        public Hotel(int IdHotel, string Pais, string Nombre){
-            idH = IdHotel;
-            pais = Pais ;
-            nom = Nombre;            
+        public Hotel(int idH, string pais, string nom){
+            _IdHotel = idH;
+            _Pais = pais ;
+            _Nombre = nom;            
         }
         public Hotel(){}
     }
