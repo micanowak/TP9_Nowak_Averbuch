@@ -9,6 +9,7 @@ C:\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.RazorAssemblyInfo.
 C:\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.dll
 C:\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\refint\TP9_Nowak_Averbuch.dll
 C:\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.pdb
+<<<<<<< HEAD
 C:\TP9\TP9_Nowak_Averbuch\bin\Debug\net6.0\appsettings.Development.json
 C:\TP9\TP9_Nowak_Averbuch\bin\Debug\net6.0\appsettings.json
 C:\TP9\TP9_Nowak_Averbuch\bin\Debug\net6.0\TP9_Nowak_Averbuch.staticwebassets.runtime.json
@@ -32,3 +33,16 @@ C:\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\scopedcss\projectbundle\TP9_Nowak_Ave
 C:\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.csproj.CopyComplete
 C:\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.genruntimeconfig.cache
 C:\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\ref\TP9_Nowak_Averbuch.dll
+=======
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.csproj.AssemblyReference.cache
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.AssemblyInfoInputs.cache
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.AssemblyInfo.cs
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.csproj.CoreCompileInputs.cache
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.RazorAssemblyInfo.cache
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.RazorAssemblyInfo.cs
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.dll
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\refint\TP9_Nowak_Averbuch.dll
+C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.pdb
+>>>>>>> fc0538f5fd39b0d46492caf28be7063c189e804c
