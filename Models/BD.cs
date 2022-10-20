@@ -10,9 +10,9 @@ namespace TP9_Nowak_Averbuch.Models
         private static string _ConnectionString = @"Server=A-PHZ2-CIDI-052;DataBase=JuegoQQSM;Trusted_Connection=True;";
 
         public static void ReservarHabitacion(DateTime fechaIN, DateTime fechaOut, int fkHotel, int fkHabi, string Nombre, int dni){
-            string SQL = "INSERT INTO Reserva(fechaIN, fechaOUT, fkHotel, fkHabitacion, nombre, DNI, comprobante) VALUES (@pfechaIN, @pfechaOUT, @pfkHotel, @pfkHabitacion, @pnombre, @pDNI)";
+            string SQL = "INSERT INTO Reserva(fechaIN, fechaOUT, fkHotel, fkHabitacion, nombre, DNI, estadoComprobante) VALUES (@pfechaIN, @pfechaOUT, @pfkHotel, @pfkHabitacion, @pnombre, @pDNI, @pEstado)";
             using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pfechaIN = fechaIN, pfechaOUT = fechaOut, pfkHotel = fkHotel, pfkHabitacion = fkHabi, pnombre = Nombre, pDNI = dni});
+                db.Execute(SQL, new{pfechaIN = fechaIN, pfechaOUT = fechaOut, pfkHotel = fkHotel, pfkHabitacion = fkHabi, pnombre = Nombre, pDNI = dni, pEstado = 0});
             }
         }
 
@@ -60,6 +60,15 @@ namespace TP9_Nowak_Averbuch.Models
                 }
         }
 
-        // FALTA INGRESAR COMPROBANTE Y SUS FUNCIONES
+        public static void IngresarComprobante(int id, string comp){
+            string SQL = "UPDATE Reserva SET estadoComprobante = @pEstado WHERE IdReserva = @pID";
+                using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                db.Execute(SQL, new{pEstado = 1, pID = id});
+                }
+            SQL = "UPDATE Reserva SET comprobante = @pComp WHERE IdReserva = @pID";
+                using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                db.Execute(SQL, new{pComp = comp, pID = id});
+                }
+        }
     }
 }

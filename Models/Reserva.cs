@@ -36,7 +36,7 @@ namespace TP9_Nowak_Averbuch.Models
             estado = _EstadoComprobante;
         }
 
-        public Reserva(int idR, DateTime fechI, DateTime fechO, int hot, int hab, string nom, int dn1){
+        public Reserva(int idR, DateTime fechI, DateTime fechO, int hot, int hab, string nom, int dn1, bool estado){
             
             idR = _IdReserva;
             fechI = _fechaIN;
@@ -45,6 +45,7 @@ namespace TP9_Nowak_Averbuch.Models
             hab = _fkHabitacion;
             nom = _nombre;
             dn1 = _DNI;
+            estado = _EstadoComprobante;
         }
         public Reserva(){}
     }
