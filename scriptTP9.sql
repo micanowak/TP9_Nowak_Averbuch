@@ -1,7 +1,15 @@
 USE [master]
 GO
-/****** Object:  Database [scriptTP9]    Script Date: 13/10/2022 12:06:26 ******/
-
+/****** Object:  Database [scriptTP9]    Script Date: 20/10/2022 11:46:54 ******/
+CREATE DATABASE [scriptTP9]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'scriptTP9', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\scriptTP9.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'scriptTP9_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\scriptTP9_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+GO
+ALTER DATABASE [scriptTP9] SET COMPATIBILITY_LEVEL = 140
+GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
 EXEC [scriptTP9].[dbo].[sp_fulltext_database] @action = 'enable'
@@ -71,10 +79,10 @@ ALTER DATABASE [scriptTP9] SET QUERY_STORE = OFF
 GO
 USE [scriptTP9]
 GO
-/****** Object:  User [alumno]    Script Date: 13/10/2022 12:06:26 ******/
+/****** Object:  User [alumno]    Script Date: 20/10/2022 11:46:54 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Foto]    Script Date: 13/10/2022 12:06:26 ******/
+/****** Object:  Table [dbo].[Foto]    Script Date: 20/10/2022 11:46:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -88,7 +96,7 @@ CREATE TABLE [dbo].[Foto](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Habitacion]    Script Date: 13/10/2022 12:06:26 ******/
+/****** Object:  Table [dbo].[Habitacion]    Script Date: 20/10/2022 11:46:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -106,7 +114,7 @@ CREATE TABLE [dbo].[Habitacion](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Hotel]    Script Date: 13/10/2022 12:06:26 ******/
+/****** Object:  Table [dbo].[Hotel]    Script Date: 20/10/2022 11:46:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,21 +129,21 @@ CREATE TABLE [dbo].[Hotel](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Nivel]    Script Date: 13/10/2022 12:06:26 ******/
+/****** Object:  Table [dbo].[Nivel]    Script Date: 20/10/2022 11:46:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Nivel](
 	[IdNivel] [int] IDENTITY(1,1) NOT NULL,
-	[nivel] [varchar](50) NOT NULL,
+	[StatusNivel] [varchar](50) NOT NULL,
  CONSTRAINT [PK_Nivel] PRIMARY KEY CLUSTERED 
 (
 	[IdNivel] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NoDisponibilidad]    Script Date: 13/10/2022 12:06:26 ******/
+/****** Object:  Table [dbo].[NoDisponibilidad]    Script Date: 20/10/2022 11:46:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -150,7 +158,7 @@ CREATE TABLE [dbo].[NoDisponibilidad](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Reserva]    Script Date: 13/10/2022 12:06:26 ******/
+/****** Object:  Table [dbo].[Reserva]    Script Date: 20/10/2022 11:46:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -195,9 +203,9 @@ SET IDENTITY_INSERT [dbo].[Hotel] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Nivel] ON 
 
-INSERT [dbo].[Nivel] ([IdNivel], [nivel]) VALUES (1, N'Economico')
-INSERT [dbo].[Nivel] ([IdNivel], [nivel]) VALUES (2, N'Standar')
-INSERT [dbo].[Nivel] ([IdNivel], [nivel]) VALUES (3, N'Premium')
+INSERT [dbo].[Nivel] ([IdNivel], [StatusNivel]) VALUES (1, N'Economico')
+INSERT [dbo].[Nivel] ([IdNivel], [StatusNivel]) VALUES (2, N'Standar')
+INSERT [dbo].[Nivel] ([IdNivel], [StatusNivel]) VALUES (3, N'Premium')
 SET IDENTITY_INSERT [dbo].[Nivel] OFF
 GO
 SET IDENTITY_INSERT [dbo].[NoDisponibilidad] ON 
