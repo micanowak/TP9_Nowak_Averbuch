@@ -11,8 +11,8 @@ namespace TP9_Nowak_Averbuch.Models
 
        
         public Nivel(int IdNivel, string Nivel){
-            idN = IdNivel;
-            niv = Nivel ;
+            idN = _IdNivel;
+            niv = _Nivel ;
         }
         public Nivel(){}
     }

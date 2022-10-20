@@ -11,8 +11,8 @@ namespace TP9_Nowak_Averbuch.Models
 
        
         public Foto(int IdFoto, string Nombre){
-            idF = IdFoto;
-            nom = Nombre ;
+            idF = _IdFoto;
+            nom = _Nombre ;
         }
         public Foto(){}
     }
