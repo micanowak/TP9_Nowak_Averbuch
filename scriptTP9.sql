@@ -1,15 +1,7 @@
 USE [master]
 GO
 /****** Object:  Database [scriptTP9]    Script Date: 13/10/2022 12:06:26 ******/
-CREATE DATABASE [scriptTP9]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'scriptTP9', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\scriptTP9.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON 
-( NAME = N'scriptTP9_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\scriptTP9_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
-GO
-ALTER DATABASE [scriptTP9] SET COMPATIBILITY_LEVEL = 140
-GO
+
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
 EXEC [scriptTP9].[dbo].[sp_fulltext_database] @action = 'enable'

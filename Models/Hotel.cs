@@ -1,6 +1,6 @@
 namespace TP9_Nowak_Averbuch.Models
 {
-    class Hotel
+    public class Hotel
     {
         private int _IdHotel;
         private string _Pais;

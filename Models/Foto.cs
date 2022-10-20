@@ -1,6 +1,6 @@
 namespace TP9_Nowak_Averbuch.Models
 {
-    class Foto
+    public class Foto
     {
         private int _IdFoto;
         private string _Nombre;

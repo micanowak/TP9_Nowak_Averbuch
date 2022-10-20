@@ -1,6 +1,6 @@
 namespace TP9_Nowak_Averbuch.Models
 {
-    class Habitacion
+    public class Habitacion
     {
         private int _IdHabitacion;
         private int _Piso;
