@@ -13,9 +13,9 @@ namespace TP9_Nowak_Averbuch.Models
         public int FkHabitacion{get {return _FkHabitacion;} set {_FkHabitacion = value;}}
 
         public NoDisponibilidad(int idND, DateTime dia, int FkHab){
-            _IdNoDisponible = idND;
-            _FechaDia = dia;
-            _FkHabitacion = FkHab;
+            idND = _IdNoDisponible;
+            dia = _FechaDia;
+            FkHab = _FkHabitacion;
         }
         public NoDisponibilidad(){}
     }

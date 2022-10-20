@@ -14,9 +14,9 @@ namespace TP9_Nowak_Averbuch.Models
 
        
         public Hotel(int idH, string pais, string nom){
-            _IdHotel = idH;
-            _Pais = pais ;
-            _Nombre = nom;            
+            idH = _IdHotel;
+            pais = _Pais;
+            nom = _Nombre;            
         }
         public Hotel(){}
     }
