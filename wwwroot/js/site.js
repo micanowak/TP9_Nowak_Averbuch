@@ -1,5 +1,21 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
+function MostrarHotel(IdHotel) {
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/Home/VerDetalleActoresAjax',
+        data: { IdHotel: IdH },
+        success: function(response) {
+            $("#NombreHotel").html(response.nombre);
+            $("#StatusHabitacion").html("1. Habitación: " + response.statusNivel);
+            $("#StatusHabitacion").html("2. Habitación: " + response.statusNivel);
+            $("#StatusHabitacion").html("3. Habitación: " + response.statusNivel);
 
-// Write your JavaScript code.
-
+        },
+        error: function(xhr, status) {
+            alert('Disculpe, existe un problema')
+        },
+        complete: function(xhr, status) {
+            console.log('Petición realizada');
+        }
+    });

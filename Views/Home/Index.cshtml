@@ -44,33 +44,16 @@
 
     <div class="container">
       <div class="row">
+          
           <div class="col -4">
               <div class="card" style="width: 18rem;">
                   <img src="..." class="card-img-top" alt="...">
                   <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col -4">
-              <div class="card" style="width: 18rem;">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col -4">
-              <div class="card" style="width: 18rem;">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">PURA VIDA MEX</h5>
+                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalHotel"
+                    onclick="MostrarHotel(@item.IdHotel)">Temporadas</button>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                   </div>
               </div>
           </div>
@@ -80,13 +63,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <p>Reseña número 1</p>>
+          <p>Reseña número 1</p>
         </div>
         <div class="carousel-item">
-          <p>Reseña número 2</p>>
+          <p>Reseña número 2</p>
         </div>
         <div class="carousel-item">
-          <p>Reseña número 3</p>>
+          <p>Reseña número 3</p>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -97,6 +80,27 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+    </div>
+
+
+
+    <div class="modal fade" id="ModalHotel" tabindex="-1" aria-labelled by="exampleModalLabel" aria-hidden="true">
+        <div class=" modal-dialog">
+            <div class=" modal-content">
+                <div class=" modal-header">
+                    <h5 class=" modal-title" id="nombreHotel"> Modal title </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria - hidden="true"> & times ; </span>
+                    </button>
+                </div>
+                <div class=" modal - body ">
+                </div>
+               
+            </div>
+            <div class=" modal-footer ">
+                <button type=" button " class="b btn-secondary " data-dismiss="modal"> Close </button>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
