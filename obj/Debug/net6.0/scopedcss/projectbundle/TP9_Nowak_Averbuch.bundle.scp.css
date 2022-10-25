@@ -2,14 +2,11 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-<<<<<<< HEAD
 *[b-sdu5122qbs]{
   margin: 0;
   padding: 0;
 }
 
-=======
->>>>>>> c441214c93a1ebb0e9db4e127888bd6392087b29
 a.navbar-brand[b-sdu5122qbs] {
   white-space: normal;
   text-align: center;
