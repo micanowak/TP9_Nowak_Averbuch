@@ -15,6 +15,61 @@
   <header>
   </header>
   <body>
+
+    <div class="card">
+      <div class="card-body">
+        <p>Reservar Turno</p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <form method="post" action='@Url.Action("GuardarReserva","Home")' enctype="multipart/form-data" class="formReserva" name="formReservar">
+                <p>
+                    Fecha de Ingreso <br/>
+                    <input type="date" name="fechaIN"/>
+                    <br/>
+                    <br/>
+                    Fecha de Salida <br/>
+                    <input type="date" name="fechaOUT"/>
+                    <br/>
+                    <br/>
+                    <label for="fkHotel">¿Qué Hotel buscas?</label><br/>
+                    <select name="fkHotel" id="fkHotel">
+                        <option value="hotel1">Hotel 1</option>
+                        <option value="hotel2">Hotel 2</option>
+                        <option value="hotel3">Hotel 3</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <label for="fkHabitacion">¿Qué Habitación quieres?</label><br/>
+                    <select name="fkHabitacion" id="fkHabitacion">
+                        <option value="habi1">Habi 1</option>
+                        <option value="habi2">Habi 2</option>
+                        <option value="habi3">Habi 3</option>
+                    </select>
+                    </br>
+                    <br/>
+                    Nombre Completo <br/>
+                    <input type="text" name="Nombre"/>
+                    <br/>
+                    <br/>
+                    DNI <br/>
+                    <input type="number" name="DNI"/>
+                    <br/>
+                    <br/>
+                    <input type="submit" value="Guardar">
+                </p>
+              </form>
+              if(form formReservar){
+                <p>@Viewbag.idReserva</p>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </br>
     
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -52,7 +107,7 @@
                   <h5 class="card-title">PURA VIDA MEX</h5>
                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalHotel"
-                    onclick="MostrarHotel(@item.IdHotel)">Temporadas</button>
+                    onclick="MostrarHotel(IdHotel)">Temporadas</button>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                   </div>
               </div>

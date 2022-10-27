@@ -18,9 +18,11 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Reservar()
+    public IActionResult GuardarReserva(DateTime fechaIN, DateTime fechaOUT, int fkHotel, int fkHabitacion, string Nombre, int DNI)
     {
-        return View();
+        int id = BD.ReservarHabitacion(fechaIN, fechaOUT, fkHotel, fkHabitacion, Nombre, DNI);
+        ViewBag.idReserva = id;
+        return View("Index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

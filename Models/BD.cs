@@ -9,11 +9,18 @@ namespace TP9_Nowak_Averbuch.Models
     {
         private static string _ConnectionString = @"Server=A-PHZ2-CIDI-052;DataBase=JuegoQQSM;Trusted_Connection=True;";
 
-        public static void ReservarHabitacion(DateTime fechaIN, DateTime fechaOut, int fkHotel, int fkHabi, string Nombre, int dni){
+        public static int ReservarHabitacion(DateTime fechaIN, DateTime fechaOut, int fkHotel, int fkHabi, string Nombre, int dni){
+            int id;
             string SQL = "INSERT INTO Reserva(fechaIN, fechaOUT, fkHotel, fkHabitacion, nombre, DNI, estadoComprobante) VALUES (@pfechaIN, @pfechaOUT, @pfkHotel, @pfkHabitacion, @pnombre, @pDNI, @pEstado)";
             using(SqlConnection db = new SqlConnection(_ConnectionString)){
                 db.Execute(SQL, new{pfechaIN = fechaIN, pfechaOUT = fechaOut, pfkHotel = fkHotel, pfkHabitacion = fkHabi, pnombre = Nombre, pDNI = dni, pEstado = 0});
             }
+            SQL = "SELECT IdReserva from Reserva WHERE fechaIN = @pfechaIN AND fechaOUT = @pfechaOUT AND fkHotel = @pfkHotel AND fkHabitacion = @pfkHabitacion AND Nombre = @pnombre AND DNI = @pDNI AND estadoComprobante = @pEstado";
+            using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                id = db.QueryFirstOrDefault<int>(SQL, new{pfechaIN = fechaIN, pfechaOUT = fechaOut, pfkHotel = fkHotel, pfkHabitacion = fkHabi, pnombre = Nombre, pDNI = dni, pEstado = 0});
+            }
+            
+            return id;
         }
 
         public static Reserva BuscarReserva(int idReserva){
