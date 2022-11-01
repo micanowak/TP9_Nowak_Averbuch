@@ -19,3 +19,37 @@ function MostrarHotel(IdHotel) {
             console.log('Petición realizada');
         }
     });
+}
+
+function BuscarReserva() {
+    var Reserva = $("#Numero").val();
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/Home/BuscarReservaAjax',
+        data: { IdReserva: Reserva },
+        success: function(response) {
+            var formu = '<form method="post" action="/Home/ModificarReserva" enctype="multipart/form-data" class="formReserva" name="formReservar">';
+            formu += '<p> Fecha de Ingreso <br/>';
+            formu += '<input type="date" name="fechaIN" value="'+response.fechaIN + '"/>';
+            formu += '<br/><br/>Fecha de Salida <br/>';
+            formu += '<input type="date" name="fechaOUT" value="'+response.fechaOUT + '"/><br/><br/>';
+            formu += '<label for="fkHotel">¿Qué Hotel buscas?</label><br/><select name="fkHotel" id="fkHotel">';
+            formu += '<option value="1">Hotel 1</option><option value="2">Hotel 2</option><option value="3">Hotel 3</option></select><br/><br/>';
+            formu += '<label for="fkHabitacion">¿Qué Habitación quieres?</label><br/><select name="fkHabitacion" id="fkHabitacion">';
+            formu += '<option value="1">Habi 1</option><option value="2">Habi 2</option><option value="3">Habi 3</option></select></br><br/>';
+            formu += 'Nombre Completo <br/><input type="text" name="Nombre" value="'+response.Nombre + '"/><br/><br/>';
+            formu += 'DNI <br/><input type="number" name="DNI" value="'+response.DNI + '"/><br/><br/><input type="submit" value="Guardar"></p>';
+            formu += '</form>';
+
+            $("#DatosReserva").html(formu);
+        },
+        error: function(xhr, status) {
+            alert('Disculpe, existe un problema')
+        },
+        complete: function(xhr, status) {
+            console.log('Petición realizada');
+        }
+    });
+
+}
