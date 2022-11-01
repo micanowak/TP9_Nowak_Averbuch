@@ -20,3 +20,14 @@ body {
 .formReserva{
   text-align: center;
 }
+
+.logoStyle{
+  width: 8.5%;
+  height: auto;
+  float: left;
+  margin-left: 1%;
+}
+
+.center{
+  align-items: center;
+}
