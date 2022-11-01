@@ -16298,6 +16298,11 @@
   "RootNamespace": "TP9_Nowak_Averbuch",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\47297838\\Downloads\\TP9_Nowak_Averbuch\\Views\\Home\\MostrarId.cshtml",
+      "TargetPath": "Views\\Home\\MostrarId.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\47297838\\Downloads\\TP9_Nowak_Averbuch\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
