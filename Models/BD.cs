@@ -7,7 +7,7 @@ namespace TP9_Nowak_Averbuch.Models
 {
     class BD
     {
-        private static string _ConnectionString = @"Server=A-PHZ2-CIDI-052;DataBase=JuegoQQSM;Trusted_Connection=True;";
+        private static string _ConnectionString = @"Server=A-PHZ2-CIDI-024;DataBase=scriptTP9;Trusted_Connection=True;";
 
         public static int ReservarHabitacion(DateTime fechaIN, DateTime fechaOut, int fkHotel, int fkHabi, string Nombre, int dni){
             int id;

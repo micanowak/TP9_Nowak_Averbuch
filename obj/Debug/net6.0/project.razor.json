@@ -16308,8 +16308,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\Views\\Home\\ModificarReserva.cshtml",
+      "TargetPath": "Views\\Home\\ModificarReserva.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\Views\\Home\\MostrarId.cshtml",
+      "TargetPath": "Views\\Home\\MostrarId.cshtml",
       "FileKind": "mvc"
     },
     {
