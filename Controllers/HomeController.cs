@@ -17,6 +17,10 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult ModificarReserva()
+    {
+        return View();
+    }
 
     [HttpPost]
     public IActionResult GuardarReserva(DateTime fechaIN, DateTime fechaOUT, int fkHotel, int fkHabitacion, string Nombre, int DNI)
