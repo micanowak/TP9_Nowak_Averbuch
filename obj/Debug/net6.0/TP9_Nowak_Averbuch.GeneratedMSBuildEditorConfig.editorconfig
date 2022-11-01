@@ -8,6 +8,7 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TP9_Nowak_Averbuch
 build_property.RootNamespace = TP9_Nowak_Averbuch
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\47297838\Downloads\TP9_Nowak_Averbuch\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -44,5 +45,43 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/47297838/Downloads/TP9_Nowak_Averbuch/Views/Shared/_Layout.cshtml]
+=======
+build_property.ProjectDir = z:\22\PROG\TP9\TP9_Nowak_Averbuch\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = z:\22\PROG\TP9\TP9_Nowak_Averbuch
+build_property._RazorSourceGeneratorDebug = 
+
+[z:/22/PROG/TP9/TP9_Nowak_Averbuch/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/22/PROG/TP9/TP9_Nowak_Averbuch/Views/Home/ModificarReserva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb2RpZmljYXJSZXNlcnZhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/22/PROG/TP9/TP9_Nowak_Averbuch/Views/Home/MostrarId.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb3N0cmFySWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/22/PROG/TP9/TP9_Nowak_Averbuch/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/22/PROG/TP9/TP9_Nowak_Averbuch/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/22/PROG/TP9/TP9_Nowak_Averbuch/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/22/PROG/TP9/TP9_Nowak_Averbuch/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/22/PROG/TP9/TP9_Nowak_Averbuch/Views/Shared/_Layout.cshtml]
+>>>>>>> ddc40bf5b3b2e0e75d2ba5adfbb3339fbb1f154f
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sdu5122qbs
