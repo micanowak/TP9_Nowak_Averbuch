@@ -11,52 +11,52 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <div class="card">
-      <div class="card-body">
-        <p>Reservar Turno</p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <form method="post" action='@Url.Action("GuardarReserva","Home")' enctype="multipart/form-data" class="formReserva" name="formReservar">
-                <p>
-                    Fecha de Ingreso <br/>
-                    <input type="date" name="fechaIN"/>
-                    <br/>
-                    <br/>
-                    Fecha de Salida <br/>
-                    <input type="date" name="fechaOUT"/>
-                    <br/>
-                    <br/>
-                    <label for="fkHotel">¿Qué Hotel buscas?</label><br/>
-                    <select name="fkHotel" id="fkHotel">
-                        <option value="1">Hotel 1</option>
-                        <option value="2">Hotel 2</option>
-                        <option value="3">Hotel 3</option>
-                    </select>
-                    <br/>
-                    <br/>
-                    <label for="fkHabitacion">¿Qué Habitación quieres?</label><br/>
-                    <select name="fkHabitacion" id="fkHabitacion">
-                        <option value="1">Habi 1</option>
-                        <option value="2">Habi 2</option>
-                        <option value="3">Habi 3</option>
-                    </select>
-                    </br>
-                    <br/>
-                    Nombre Completo <br/>
-                    <input type="text" name="Nombre"/>
-                    <br/>
-                    <br/>
-                    DNI <br/>
-                    <input type="number" name="DNI"/>
-                    <br/>
-                    <br/>
-                    <input type="submit" value="Guardar">
-                </p>
-              </form>
-            </div>
+</head>
+<body>
+  <div class="card">
+    <div class="card-body">
+      <p>Reservar Turno</p>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <form method="post" action='@Url.Action("GuardarReserva","Home")' enctype="multipart/form-data" class="formReserva" name="formReservar">
+              <p>
+                Fecha de Ingreso <br/>
+                <input type="date" name="fechaIN"/>
+                <br/>
+                <br/>
+                Fecha de Salida <br/>
+                <input type="date" name="fechaOUT"/>
+                <br/>
+                <br/>
+                <label for="fkHotel">¿Qué Hotel buscas?</label><br/>
+                <select name="fkHotel" id="fkHotel">
+                  <option value="1">Hotel 1</option>
+                  <option value="2">Hotel 2</option>
+                  <option value="3">Hotel 3</option>
+                </select>
+                <br/>
+                <br/>
+                <label for="fkHabitacion">¿Qué Habitación quieres?</label><br/>
+                <select name="fkHabitacion" id="fkHabitacion">
+                  <option value="1">Habi 1</option>
+                  <option value="2">Habi 2</option>
+                  <option value="3">Habi 3</option>
+                </select>
+                </br>
+                <br/>
+                Nombre Completo <br/>
+                <input type="text" name="Nombre"/>
+                <br/>
+                <br/>
+                DNI <br/>
+                <input type="number" name="DNI"/>
+                <br/>
+                <br/>
+                <input type="submit" value="Guardar">
+              </p>
+            </form>
           </div>
         </div>
       </div>
