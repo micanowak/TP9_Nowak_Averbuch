@@ -21,6 +21,10 @@ public class HomeController : Controller
     {
         return View();
     }
+      public Habitacion VerDetalleHabitacionesAjax(int IdHab){
+        ViewBag.ListaSeries  = BD.VerHabitaciones(IdHab);
+        return ViewBag.ListaSeries;
+    }
 
     [HttpPost]
     public IActionResult GuardarReserva(DateTime fechaIN, DateTime fechaOUT, int fkHotel, int fkHabitacion, string Nombre, int DNI)

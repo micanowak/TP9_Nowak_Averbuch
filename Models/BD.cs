@@ -66,7 +66,15 @@ namespace TP9_Nowak_Averbuch.Models
                 db.Execute(SQL, new{pID = idReserva});
                 }
         }
-
+        public static Habitacion VerHabitaciones(int IdHab)
+        {
+            Habitacion _Habitaciones = new Habitacion();
+            string sql = "SELECT * FROM Habitacion WHERE IdHab = @nivel";
+            using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                _Habitaciones = db.QueryFirstOrDefault<Habitacion>(sql,new{nivel = IdHab});
+            }
+            return _Habitaciones;
+        }
         public static void IngresarComprobante(int id, string comp){
             string SQL = "UPDATE Reserva SET estadoComprobante = @pEstado WHERE IdReserva = @pID";
                 using(SqlConnection db = new SqlConnection(_ConnectionString)){
