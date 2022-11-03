@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "C:\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
         "packagesPath": "C:\\Users\\46754864\\.nuget\\packages\\",
         "outputPath": "C:\\TP9_Nowak_Averbuch\\obj\\",
+=======
+    "C:\\Users\\47297838\\Downloads\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\47297838\\Downloads\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\47297838\\Downloads\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
+        "projectName": "TP9_Nowak_Averbuch",
+        "projectPath": "C:\\Users\\47297838\\Downloads\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
+        "packagesPath": "C:\\Users\\47297838\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\47297838\\Downloads\\TP9_Nowak_Averbuch\\obj\\",
+>>>>>>> 173ddaa90e205df7ae5f3fed9a5e09f35b19455e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\46754864\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\47297838\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
