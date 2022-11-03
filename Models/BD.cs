@@ -40,7 +40,6 @@ namespace TP9_Nowak_Averbuch.Models
             }
             SQL = "UPDATE Reserva SET FechaIN = @pfechaIN AND fechaOUT = @pfechaOUT AND fkHotel = @pfkHo AND fkHabitacion = @pfkHabi AND nombre = @pNom AND DNI = @pdni AND estadoComprobante = @pEstado AND comprobante = @pComp WHERE IdReserva = @pID";
                 using(SqlConnection db = new SqlConnection(_ConnectionString)){
-<<<<<<< HEAD
                 db.Execute(SQL, new{pFecha = fecha, pID = id});
                 }
         }
@@ -89,9 +88,6 @@ namespace TP9_Nowak_Averbuch.Models
             SQL = "UPDATE Reserva SET comprobante = @pComp WHERE IdReserva = @pID";
                 using(SqlConnection db = new SqlConnection(_ConnectionString)){
                 db.Execute(SQL, new{pComp = comp, pID = id});
-=======
-                db.Execute(SQL, new{pfechaIN = res.fechaIN, pfechaOUT = res.fechaOUT, pfkHo = res.fkHotel, pfkHabi = res.fkHabitacion, pNom = res.Nombre, pdni = res.DNI, pEstado = res.EstadoComprobante, pComp = res.Comprobante});
->>>>>>> 173ddaa90e205df7ae5f3fed9a5e09f35b19455e
                 }
         }
     }
