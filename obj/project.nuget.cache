@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jwexgR0A5IyFl0YnxiibKy/klvqI9R3zRBvQjZL0IRa0+0jSAQRhNFGzjjg7i0Pnkb4O6xwjTfM5RjfWsU3IIQ==",
+  "dgSpecHash": "7v7Rc5UXRqeywvsy8T3zfxrKr9JMEWmIe7jP2R8K5bSD4Z13wuFUHLA/n1Whe3BemLhf4RMaQyA7AByC5M+OVA==",
   "success": true,
-  "projectFilePath": "Z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
+  "projectFilePath": "C:\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46754864\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\46754864\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
