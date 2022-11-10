@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj": {}
+    "C:\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj": {}
   },
   "projects": {
-    "Z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj": {
+    "C:\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
+        "projectUniqueName": "C:\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
         "projectName": "TP9_Nowak_Averbuch",
-        "projectPath": "Z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
+        "projectPath": "C:\\TP9_Nowak_Averbuch\\TP9_Nowak_Averbuch.csproj",
         "packagesPath": "C:\\Users\\46754864\\.nuget\\packages\\",
-        "outputPath": "Z:\\22\\PROG\\TP9\\TP9_Nowak_Averbuch\\obj\\",
+        "outputPath": "C:\\TP9_Nowak_Averbuch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

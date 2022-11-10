@@ -17,9 +17,15 @@ public class HomeController : Controller
     {
         return View();
     }
+    
+    [HttpPost]
     public IActionResult ModificarReserva()
     {
         return View();
+    }
+      public Habitacion VerDetalleHabitacionesAjax(int IdHab){
+        ViewBag.ListaSeries  = BD.VerHabitaciones(IdHab);
+        return ViewBag.ListaSeries;
     }
 
     [HttpPost]

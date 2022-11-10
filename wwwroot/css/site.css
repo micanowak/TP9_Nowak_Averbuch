@@ -31,3 +31,21 @@ body {
 .center{
   align-items: center;
 }
+
+.fondoVerde{
+  background-color: #487c5c;
+}
+.specialFont{
+font-family: Attorney Regular;
+}
+.interletrado{
+  letter-spacing: 2.5px;
+}
+
+.sizeXL{
+  font-size:x-large;
+}
+
+.sizeL{
+  font-size:large ;
+}
