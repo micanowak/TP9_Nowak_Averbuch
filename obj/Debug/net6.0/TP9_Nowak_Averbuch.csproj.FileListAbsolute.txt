@@ -6,3 +6,14 @@ C:\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.csproj.CoreCompileInpu
 C:\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.MvcApplicationPartsAssemblyInfo.cache
 C:\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.RazorAssemblyInfo.cache
 C:\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.RazorAssemblyInfo.cs
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.csproj.AssemblyReference.cache
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.GeneratedMSBuildEditorConfig.editorconfig
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.AssemblyInfoInputs.cache
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.AssemblyInfo.cs
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.csproj.CoreCompileInputs.cache
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.MvcApplicationPartsAssemblyInfo.cache
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.RazorAssemblyInfo.cache
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.RazorAssemblyInfo.cs
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.dll
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\refint\TP9_Nowak_Averbuch.dll
+Z:\22\PROG\TP9\TP9_Nowak_Averbuch\obj\Debug\net6.0\TP9_Nowak_Averbuch.pdb
