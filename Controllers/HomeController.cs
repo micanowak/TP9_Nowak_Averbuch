@@ -18,13 +18,16 @@ public class HomeController : Controller
         return View();
     }
     
-    [HttpPost]
-    public IActionResult ModificarReserva()
+    public Reserva BuscarReservaAjax(int IdReserva){
+        return BD.BuscarReserva(IdReserva);
+    }
+    public IActionResult ModificarReserva(Reserva res)
     {
+        BD.Modificar(res);
         return View();
     }
-      public Habitacion VerDetalleHabitacionesAjax(int IdHab){
-        ViewBag.ListaSeries  = BD.VerHabitaciones(IdHab);
+    public Habitacion VerDetalleHabitacionesAjax(int IdHab){
+        ViewBag.ListaSeries  = BD.BuscarReserva(IdHab);
         return ViewBag.ListaSeries;
     }
 

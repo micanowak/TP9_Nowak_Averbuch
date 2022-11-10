@@ -1,6 +1,6 @@
 namespace TP9_Nowak_Averbuch.Models
 {
-    class Reserva
+    public class Reserva
     {
         private int _IdReserva;
         private DateTime _fechaIN;
