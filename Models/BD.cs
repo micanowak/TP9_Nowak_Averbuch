@@ -8,7 +8,15 @@ namespace TP9_Nowak_Averbuch.Models
     class BD
     {
         private static string _ConnectionString = @"Server=A-PHZ2-CIDI-012;DataBase=scriptTP9;Trusted_Connection=True;";
-
+        private static List<Habitacion> _ListarHabitaciones = new List<Habitacion>();
+        public static List<Habitacion> ListarHabitaciones()
+        {
+            using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                string sql = "SELECT * FROM Habitacion";
+                _ListarHabitaciones = db.Query<Habitacion>(sql).ToList();
+            }
+            return _ListarHabitaciones;
+        }
         public static int ReservarHabitacion(DateTime fechaIN1, DateTime fechaOut1, int fkHotel1, int fkHabi1, string Nombre1, int dni1){
             int id;
             string SQL = "INSERT INTO Reserva(fechaIN, fechaOUT, fkHotel, fkHabitacion, nombre, DNI, estadoComprobante) VALUES (@pfechaIN, @pfechaOUT, @pfkHotel, @pfkHabitacion, @pnombre, @pDNI, @pEstado)";
