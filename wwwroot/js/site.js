@@ -29,9 +29,10 @@ function BuscarReserva() {
         url: '/Home/BuscarReservaAjax',
         data: { IdReserva: Reserva },
         success: function(response) {
-            var formu = '<form method="post" action="/Home/ModificarReserva" enctype="multipart/form-data" class="formReserva" name="formReservar">';
+            var formu = '<form method="post" action="/Home/GuardarModificacionReserva" enctype="multipart/form-data" class="formReserva" name="formReservar">';
             formu += '<p> Fecha de Ingreso <br/>';
             formu += '<input type="date" name="fechaIN" value="'+response.fechaIN.substring(0,10) + '"/>';
+            formu += '<input type="hidden" name="IdReserva" value="'+response.idReserva + '"/>';
             formu += '<br/><br/>Fecha de Salida <br/>';
             formu += '<input type="date" name="fechaOUT" value="'+response.fechaOUT.substring(0,10) + '"/><br/><br/>';
             formu += '<label for="fkHotel">¿Qué Hotel buscas?</label><br/><select name="fkHotel" id="fkHotel">';

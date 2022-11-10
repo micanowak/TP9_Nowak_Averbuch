@@ -21,14 +21,20 @@ public class HomeController : Controller
     public Reserva BuscarReservaAjax(int IdReserva){
         return BD.BuscarReserva(IdReserva);
     }
-    public IActionResult ModificarReserva(Reserva res)
+    public IActionResult ModificarReserva()
     {
-        BD.Modificar(res);
         return View();
     }
     public Habitacion VerDetalleHabitacionesAjax(int IdHab){
         ViewBag.ListaSeries  = BD.BuscarReserva(IdHab);
         return ViewBag.ListaSeries;
+    }
+
+    [HttpPost]
+    public IActionResult GuardarModificacionReserva(Reserva res)
+    {
+        BD.Modificar(res);
+        return View("ModificarReserva");
     }
 
     [HttpPost]
