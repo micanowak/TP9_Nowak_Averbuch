@@ -32,50 +32,15 @@ namespace TP9_Nowak_Averbuch.Models
             return dev;
         }
 
-        public static void ModificarFechaIN(DateTime fecha, int id){
-            string SQL = "UPDATE Reserva SET FechaIN = @pFecha WHERE IdReserva = @pID";
+public static void Modificar(Reserva res){
+            int id;
+            string SQL = "SELECT IdReserva from Reserva WHERE IdReserva = @pId";
+            using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                id = db.QueryFirstOrDefault<int>(SQL, new{pId = res.IdReserva});
+            }
+            SQL = "UPDATE Reserva SET FechaIN = @pfechaIN AND fechaOUT = @pfechaOUT AND fkHotel = @pfkHo AND fkHabitacion = @pfkHabi AND nombre = @pNom AND DNI = @pdni AND estadoComprobante = @pEstado AND comprobante = @pComp WHERE IdReserva = @pID";
                 using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pFecha = fecha, pID = id});
+                db.Execute(SQL, new{pfechaIN = res.fechaIN, pfechaOUT = res.fechaOUT, pfkHo = res.fkHotel, pfkHabi = res.fkHabitacion, pNom = res.Nombre, pdni = res.DNI, pEstado = res.EstadoComprobante, pComp = res.Comprobante});
                 }
-        }
-
-        public static void ModificarFechaOUT(DateTime fecha, int id){
-            string SQL = "UPDATE Reserva SET FechaOUT = @pFecha WHERE IdReserva = @pID";
-                using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pFecha = fecha, pID = id});
-                }
-        }
-
-        public static void ModificarHotel(int fkHot, int id){
-            string SQL = "UPDATE Reserva SET fkHotel = @pfkHot WHERE IdReserva = @pID";
-                using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pfkHot = fkHot, pID = id});
-                }
-        }
-
-        public static void ModificarHabitacion(int fkHab, int id){
-            string SQL = "UPDATE Reserva SET fkHabitacion = @pfkHab WHERE IdReserva = @pID";
-                using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pfkHab = fkHab, pID = id});
-                }
-        }
-
-        public static void EliminarReserva(int idReserva){
-            string SQL = "DELETE FROM Reserva WHERE IdReserva = @pID";
-                using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pID = idReserva});
-                }
-        }
-
-        public static void IngresarComprobante(int id, string comp){
-            string SQL = "UPDATE Reserva SET estadoComprobante = @pEstado WHERE IdReserva = @pID";
-                using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pEstado = 1, pID = id});
-                }
-            SQL = "UPDATE Reserva SET comprobante = @pComp WHERE IdReserva = @pID";
-                using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pComp = comp, pID = id});
-                }
-        }
-    }
+        }    }
 }
