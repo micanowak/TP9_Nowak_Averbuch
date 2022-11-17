@@ -23,14 +23,14 @@ namespace TP9_Nowak_Averbuch.Models
             return id;
         }
 
-        public static Habitacion VerHabitaciones(int IdHabitacion)
+        public static List<Habitacion> VerHabitaciones()
         {
-            Habitacion _Habitaciones = new Habitacion();
-            string sql = "SELECT * FROM Habitacion WHERE IdHabitacion = @nivel";
+            List<Habitacion> ListaHab = new List<Habitacion>();
+            string sql = "SELECT * FROM Habitacion";
             using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                _Habitaciones = db.QueryFirstOrDefault<Habitacion>(sql,new{nivel = IdHabitacion});
+                ListaHab = db.QueryFirstOrDefault<List<Habitacion>>(sql);
             }
-            return _Habitaciones;
+            return ListaHab;
         }
 
         public static Reserva BuscarReserva(int idReserva){
