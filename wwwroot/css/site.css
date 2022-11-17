@@ -15,10 +15,21 @@ html {
 
 body {
   margin-bottom: 60px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .formReserva{
   text-align: center;
+}
+
+.margenero{
+  margin-right: 2%;
+}
+
+.rowa{
+  margin-left: 0%;
+  padding-left: 0%;
 }
 
 .logoStyle{
@@ -26,6 +37,22 @@ body {
   height: auto;
   float: left;
   margin-left: 1%;
+}
+
+.tamano{
+  margin-top: 4%;
+  width: 30%;
+  height: 15%;
+  background-color: #487c5c;
+}
+
+.centroo{
+  display: flex;
+  justify-content: center;
+}
+
+.centerito{
+  text-align: center;
 }
 
 .center{

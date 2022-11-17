@@ -15,7 +15,7 @@
 <!-----------------------------------------------------------RESERVA---------------------------------------------------------------------------------->
 
 <body>
-<div class="container reservarTurno">
+<div class="container reservarTurno centroo centerito center">
     <div class="card-body fondoVerde specialFont interletrado ml-5" style="width: 18rem;">
       <p class="sizeL text-white">Reservar Turno</p>
       <button type="button" class="btn btn-light sizeL" data-toggle="modal" data-target=".bd-example-modal-lg">Large
@@ -37,17 +37,17 @@
                 <br />
                 <label for="fkHotel">¿Qué Hotel buscas?</label><br />
                 <select name="fkHotel" id="fkHotel">
-                  <option value="1">Hotel 1</option>
-                  <option value="2">Hotel 2</option>
-                  <option value="3">Hotel 3</option>
+                  <option value="1">Pura Vida México</option>
+                  <option value="2">Pura Vida Francia</option>
+                  <option value="3">Pura Vida Italia</option>
                 </select>
                 <br />
                 <br />
                 <label for="fkHabitacion">¿Qué Habitación quieres?</label><br />
                 <select name="fkHabitacion" id="fkHabitacion">
-                  <option value="1">Habi 1</option>
-                  <option value="2">Habi 2</option>
-                  <option value="3">Habi 3</option>
+                  <option value="1">Ron</option>
+                  <option value="2">Wine</option>
+                  <option value="3">Flow</option>
                 </select>
 
                 <br />
@@ -103,110 +103,57 @@
   <!-----------------------------------------------------------DESCRIPCIÓN EMPRESA---------------------------------------------------------------------------------->
 
   <div class="container border justify-content-center interletrado">
-    <p class="d-inline-flex p-2 bd-highlight display-4 text-center specialFont" style = "color: #487c5c; text-shadow: 1px 2px black;">Acá iría la descripcion o un slogan o lo que sea sobre la cadena de
-      hoteles</p>
+    <p class="d-inline-flex p-2 bd-highlight display-4 text-center specialFont" style = "color: #487c5c; text-shadow: 1px 2px black;">Vení a disfrutar de una experiencia totalmente inolvidable!</p>
   </div>
 <!-----------------------------------------------------------CARDS HOTELES---------------------------------------------------------------------------------->
-  <div class="container justify-content-center m-5 specialFont">
-    <div class="row">
-
+  <div class="container mt-5 specialFont">
+    <div class="row rowa">
     <div class="card-group">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+      <div class="card margenero">
+        <img src="/hotel2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">PURA VIDA MEX</h5>
+          <h5 class="card-title">Pura Vida Francia</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <button type="button" class="btn fondoVerde text-white" data-toggle="modal" data-target="#ModalHotel"
-            onclick="MostrarHotel(IdHotel)">Habitaciones</button>
           <a href="#" class="btn fondoVerde m-3  text-white">Go </a>
         </div>
       </div>
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+      <div class="card margenero">
+        <img src="/hotel1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">PURA VIDA MEX</h5>
+          <h5 class="card-title">Pura Vida Italia</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <button type="button" class="btn text-white fondoVerde" data-toggle="modal" data-target="#ModalHotel"
-            onclick="MostrarHotel(IdHotel)">Habitaciones</button>
           <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
         </div>
       </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+      <div class="card margenero" style="width: 18rem;">
+        <img src="/hotel3.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">PURA VIDA MEX</h5>
+          <h5 class="card-title">Pura Vida México</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <button type="button" class="btn text-white fondoVerde" data-toggle="modal" data-target="#ModalHotel"
-            onclick="MostrarHotel(IdHotel)">Habitaciones</button>
-          <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">PURA VIDA MEX</h5>
-          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <button type="button" class="btn fondoVerde text-white" data-toggle="modal" data-target="#ModalHotel"
-            onclick="MostrarHotel(IdHotel)">Habitaciones</button>
           <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
         </div>
       </div>
     </div>
   </div>
-  <div class="card-group">
-        <div class="card" >
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">PURA VIDA MEX</h5>
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-            <button type="button" class="btn fondoVerde text-white" data-toggle="modal" data-target="#ModalHotel"
-              onclick="MostrarHotel(IdHotel)">Habitaciones</button>
-            <a href="#" class="btn fondoVerde m-3  text-white">Go </a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">PURA VIDA MEX</h5>
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-            <button type="button" class="btn text-white fondoVerde" data-toggle="modal" data-target="#ModalHotel"
-              onclick="MostrarHotel(IdHotel)">Habitaciones</button>
-            <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">PURA VIDA MEX</h5>
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-            <button type="button" class="btn text-white fondoVerde" data-toggle="modal" data-target="#ModalHotel"
-              onclick="MostrarHotel(IdHotel)">Habitaciones</button>
-            <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">PURA VIDA MEX</h5>
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-            <button type="button" class="btn fondoVerde text-white" data-toggle="modal" data-target="#ModalHotel"
-              onclick="MostrarHotel(IdHotel)">Habitaciones</button>
-            <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
-          </div>
-        </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container center centerito centroo">
+    <button type="button" class="btn text-white tamano" data-toggle="modal" data-target="#ModalHotel">Ver Habitaciones</button>
+  </div>
 </div>
 <!-------------------------------------------------------------CAROUSEL RESEÑAS-------------------------------------------------------------------------------->
 <div class="container border mt-5 align-middle specialFont">
   <div id="carouselExampleControls" class="carousel slide justify-content-center" data-ride="carousel">
     <div class="carousel-inner text-center">
       <div class="carousel-item active ">
-        <p class = "sizeL">Reseña número 1</p>
+        <img src="/resena1.png" class="img-fluid">
       </div>
       <div class="carousel-item"> 
-        <p class = "sizeL">Reseña número 2</p>
+        <img src="/resena2.png" class="img-fluid">
       </div>
       <div class="carousel-item">
-        <p class = "sizeL">Reseña número 3</p>
+        <img src="/resena3.png" class="img-fluid">
       </div>
     </div>
 
