@@ -7,7 +7,7 @@ namespace TP9_Nowak_Averbuch.Models
 {
     class BD
     {
-        private static string _ConnectionString = @"Server=A-PHZ2-CIDI-012;DataBase=scriptTP9;Trusted_Connection=True;";
+        private static string _ConnectionString = @"Server=A-PHZ2-CIDI-026;DataBase=scriptTP9;Trusted_Connection=True;";
         private static List<Habitacion> _ListarHabitaciones = new List<Habitacion>();
         public static List<Habitacion> ListarHabitaciones()
         {

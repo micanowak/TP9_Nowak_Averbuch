@@ -1,32 +1,23 @@
 @{
   ViewData["Title"] = "Home Page";
-
+}
 
 <!doctype html>
 <html lang="en">
-<!--
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>-->
 <!-----------------------------------------------------------RESERVA---------------------------------------------------------------------------------->
 
 <body>
-<div class="container reservarTurno">
+<div class="container reservarTurno centroo centerito center">
     <div class="card-body fondoVerde specialFont interletrado ml-5" style="width: 18rem;">
       <p class="sizeL text-white">Reservar Turno</p>
-      <button type="button" class="btn btn-light sizeL" data-toggle="modal" data-target=".bd-example-modal-lg">Large
-        modal</button>
+      <button type="button" class="btn btn-light sizeL" data-toggle="modal" data-target=".bd-example-modal-lg">Formulario</button>
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <form method="post" action='@Url.Action("GuardarReserva","Home")' enctype="multipart/form-data"
               class="formReserva" name="formReservar">
-              <p>  <br />
+              <p>
                 Fecha de Ingreso <br />
                 <input type="date" name="fechaIN" />
                 <br />
@@ -37,20 +28,20 @@
                 <br />
                 <label for="fkHotel">¿Qué Hotel buscas?</label><br />
                 <select name="fkHotel" id="fkHotel">
-                  <option value="1">Hotel 1</option>
-                  <option value="2">Hotel 2</option>
-                  <option value="3">Hotel 3</option>
+                  <option value="1">Pura Vida México</option>
+                  <option value="2">Pura Vida Costa Rica</option>
+                  <option value="3">Pura Vida Panamá</option>
                 </select>
                 <br />
                 <br />
                 <label for="fkHabitacion">¿Qué Habitación quieres?</label><br />
                 <select name="fkHabitacion" id="fkHabitacion">
-                  <option value="1">Habi 1</option>
-                  <option value="2">Habi 2</option>
-                  <option value="3">Habi 3</option>
+                  <option value="1">Ron</option>
+                  <option value="2">Wine</option>
+                  <option value="3">Flow</option>
                 </select>
 
-                <br /><br />
+                <br />
                 Nombre Completo <br />
                 <input type="text" name="Nombre" />
                 <br />
@@ -70,20 +61,19 @@
   </div>
   </div>
 
-  <!-----------------------------------------------------------CAROUSEL FOTOS MUESTRA---------------------------------------------------------------------------------->
-  <div class="container justify-content-center specialFont">
-    <div class="container-md border m-2">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/hall.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/pileta.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/edificio.jpg" class="d-block w-100" alt="...">
-          </div>
+<!-----------------------------------------------------------CAROUSEL FOTOS MUESTRA---------------------------------------------------------------------------------->
+<div class="container justify-content-center specialFont">
+ <div class="container-md border m-2">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/hall.jpg" class="d-block w-100" style="height: 40rem; width: auto"alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/pileta.jpg" class="d-block w-100" style="height: 40rem; width: auto" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/edificio.jpg" class="d-block w-100" style="height: 40rem; width: auto" alt="...">
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="sr-only">Previous</span> <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -97,86 +87,72 @@
     </div>
   </div>
 
-  <!-----------------------------------------------------------LOGO EN LA MITAD DE LA PAG---------------------------------------------------------------------------------->
-
-  <div class="container mt-3 justify-content-center mx-auto">
+  <div class="container m-3 justify-content-center mx-auto">
     <img src="/LogoNegro.png" class="d-flex justify-content-center mx-auto" style="width: 18%; height: auto">
 
   </div>
   <!-----------------------------------------------------------DESCRIPCIÓN EMPRESA---------------------------------------------------------------------------------->
 
-  <div class="container justify-content-center textCenter mx-auto interletrado">
-    <p class="d-inline-flex p-2 bd-highlight display-4  specialFont"
-      style="color: #487c5c; text-shadow: 1px 2px black;">La escapada que necesitas!</p>
-   
+  <div class="container border justify-content-center interletrado">
+    <p class="d-inline-flex p-2 bd-highlight display-4 text-center specialFont" style = "color: #487c5c; text-shadow: 1px 2px black;">Vení a disfrutar de una experiencia totalmente inolvidable!</p>
   </div>
-  <!-----------------------------------------------------------CARDS HOTELES---------------------------------------------------------------------------------->
-  <div class="container justify-content-center mt-5 specialFont">
-   @{
+<!-----------------------------------------------------------CARDS HOTELES---------------------------------------------------------------------------------->
+  <div class="container mt-5 specialFont">
+    <div class="row rowa">
     <div class="card-group">
+      <div class="card margenero">
+        <img src="/hotel1.jpg" class="card-img-top" style="height: 15rem; width: auto"alt="...">
+        <div class="card-body">
+          <p class=" display-4 card-title">Costa Rica</p>
+          <h4>Desde $1850!</h4>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+          <a href="#" class="btn fondoVerde m-3  text-white">Go </a>
+        </div>
+      </div>
+      <div class="card margenero" style="width: 18rem;">
+        <img src="/hotel2.jpg" class="card-img-top" style="height: 15rem; width: auto" alt="...">
+        <div class="card-body">
+          <p class=" display-4 card-title">México</p>
+          <h4>Ofertas entre $1300 - $1600</h4>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+          <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
+        </div>
+      </div>
+      <div class="card margenero">
+        <img src="/hotel3.jpg" class="card-img-top" style="height: 15rem; width: auto" alt="...">
+        <div class="card-body">
+          <p class=" display-4 card-title">Panamá</p>
+          <h4>NOCHES por $1200</h4>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+          <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
+        </div>
+      </div>
       
-      foreach(Habitacion item in ViewBag.ListarHabitaciones)
-      { 
-          <div class="card">
-          <div class="card-body">
-              <h5 class="card-title"> @item.Nombre</h5>
-              <button type="button" class="btn fondoVerde text-white" data-toggle="modal" data-target="#ModalHotel"
-              onclick="MostrarHotel(IdHotel)">Habitaciones</button>
-          </div>
-          </div>
-      }
     </div>
-   }
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container center centerito centroo">
+    <button type="button" class="btn text-white tamano" data-toggle="modal" data-target="#ModalHotel">Ver Habitaciones</button>
+  </div>
+</div>
+<!-------------------------------------------------------------CAROUSEL RESEÑAS-------------------------------------------------------------------------------->
+<div class="container border mt-5 align-middle specialFont">
+  <div id="carouselExampleControls" class="carousel slide justify-content-center" data-ride="carousel">
+    <div class="carousel-inner text-center">
+      <div class="carousel-item active ">
+        <img src="/resena1.png" class="img-fluid">
+      </div>
+      <div class="carousel-item"> 
+        <img src="/resena2.png" class="img-fluid">
+      </div>
+      <div class="carousel-item">
+        <img src="/resena3.png" class="img-fluid">
+      </div>
+      
+    </div>
     
-      
-      
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">PURA VIDA MEX</h5>
-          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <button type="button" class="btn text-white fondoVerde" data-toggle="modal" data-target="#ModalHotel"
-            onclick="MostrarHotel(IdHotel)">Habitaciones</button>
-          <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">PURA VIDA MEX</h5>
-          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <button type="button" class="btn fondoVerde text-white" data-toggle="modal" data-target="#ModalHotel"
-            onclick="MostrarHotel(IdHotel)">Habitaciones</button>
-          <a href="#" class="btn fondoVerde m-3 text-white">Go </a>
-        </div>
-      </div>
-    </div>
-    <!-------------------------------------------------------------CAROUSEL RESEÑAS-------------------------------------------------------------------------------->
-    <div class="container border mt-5 align-middle specialFont justify-content-center">
-      <div id="carouselExampleControls" class="carousel slide justify-content-center" data-ride="carousel">
-        <div class="carousel-inner text-center">
-          <div class="carousel-item active ">
-            <p class="sizeL">Reseña número 1</p>
-          </div>
-          <div class="carousel-item">
-            <p class="sizeL">Reseña número 2</p>
-          </div>
-          <div class="carousel-item">
-            <p class="sizeL">Reseña número 3</p>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-
-
 
 
     <div class="modal fade" id="ModalHotel" tabindex="-1" aria-labelled by="exampleModalLabel" aria-hidden="true">
@@ -207,7 +183,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
-}
+
 </body>
 
 
