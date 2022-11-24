@@ -1,3 +1,4 @@
+using System;
 namespace TP9_Nowak_Averbuch.Models
 {
     public class NoDisponibilidad

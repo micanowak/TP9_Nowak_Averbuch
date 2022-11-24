@@ -10,8 +10,10 @@ public class HomeController : Controller
        public IActionResult Index()
     {
         ViewBag.ListaHabitaciones = BD.VerHabitaciones();
+        ViewBag.ListaHoteles = BD.VerHoteles();
         return View();
     }
+    
     
     public Reserva BuscarReservaAjax(int IdReserva){
         return BD.BuscarReserva(IdReserva);

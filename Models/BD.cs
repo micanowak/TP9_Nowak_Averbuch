@@ -37,9 +37,18 @@ namespace TP9_Nowak_Averbuch.Models
             List<Habitacion> ListaHab = new List<Habitacion>();
             string sql = "SELECT * FROM Habitacion";
             using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                ListaHab = db.QueryFirstOrDefault<List<Habitacion>>(sql);
+                ListaHab = db.Query<Habitacion>(sql).ToList();
             }
             return ListaHab;
+        }
+        public static List<Hotel> VerHoteles()
+        {
+            List<Hotel> ListaHot = new List<Hotel>();
+            string sql = "SELECT * FROM Hotel";
+            using(SqlConnection db = new SqlConnection(_ConnectionString)){
+                ListaHot = db.Query<Hotel>(sql).ToList();
+            }
+            return ListaHot;
         }
 
         public static Reserva BuscarReserva(int idReserva){
