@@ -2,6 +2,7 @@ using System;
 using System.Data.SqlClient;
 using Dapper;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TP9_Nowak_Averbuch.Models
 {
@@ -31,14 +32,14 @@ namespace TP9_Nowak_Averbuch.Models
             return id;
         }
 
-        public static Habitacion VerHabitaciones(int IdHabitacion)
+        public static List<Habitacion> VerHabitaciones()
         {
-            Habitacion _Habitaciones = new Habitacion();
-            string sql = "SELECT * FROM Habitacion WHERE IdHabitacion = @nivel";
+            List<Habitacion> ListaHab = new List<Habitacion>();
+            string sql = "SELECT * FROM Habitacion";
             using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                _Habitaciones = db.QueryFirstOrDefault<Habitacion>(sql,new{nivel = IdHabitacion});
+                ListaHab = db.QueryFirstOrDefault<List<Habitacion>>(sql);
             }
-            return _Habitaciones;
+            return ListaHab;
         }
 
         public static Reserva BuscarReserva(int idReserva){
@@ -56,9 +57,9 @@ public static void Modificar(Reserva res){
             using(SqlConnection db = new SqlConnection(_ConnectionString)){
                 id = db.QueryFirstOrDefault<int>(SQL, new{pId = res.IdReserva});
             }
-            SQL = "UPDATE Reserva SET FechaIN = @pfechaIN AND fechaOUT = @pfechaOUT AND fkHotel = @pfkHo AND fkHabitacion = @pfkHabi AND nombre = @pNom AND DNI = @pdni AND estadoComprobante = @pEstado AND comprobante = @pComp WHERE IdReserva = @pID";
+            SQL = "UPDATE Reserva SET FechaIN = @pfechaIN, fechaOUT = @pfechaOUT, fkHotel = @pfkHo, fkHabitacion = @pfkHabi, nombre = @pNom, DNI = @pdni, estadoComprobante = @pEstado, comprobante = @pComp WHERE IdReserva = @pID";
                 using(SqlConnection db = new SqlConnection(_ConnectionString)){
-                db.Execute(SQL, new{pfechaIN = res.fechaIN, pfechaOUT = res.fechaOUT, pfkHo = res.fkHotel, pfkHabi = res.fkHabitacion, pNom = res.Nombre, pdni = res.DNI, pEstado = res.EstadoComprobante, pComp = res.Comprobante});
+                db.Execute(SQL, new{pfechaIN = res.fechaIN, pfechaOUT = res.fechaOUT, pfkHo = res.fkHotel, pfkHabi = res.fkHabitacion, pNom = res.Nombre, pdni = res.DNI, pEstado = res.EstadoComprobante, pComp = res.Comprobante, pID = res.IdReserva});
                 }
         }    }
 }

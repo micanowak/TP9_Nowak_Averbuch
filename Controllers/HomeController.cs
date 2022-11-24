@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TP9_Nowak_Averbuch.Models;
 
@@ -6,27 +7,29 @@ namespace TP9_Nowak_Averbuch.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+       public IActionResult Index()
     {
-        _logger = logger;
-    }
-
-    public IActionResult Index()
-    {
-        ViewBag.ListarHabitaciones = BD.ListarHabitaciones();
+        ViewBag.ListaHabitaciones = BD.VerHabitaciones();
         return View();
     }
     
-    [HttpPost]
+    public Reserva BuscarReservaAjax(int IdReserva){
+        return BD.BuscarReserva(IdReserva);
+    }
     public IActionResult ModificarReserva()
     {
         return View();
     }
-      public Habitacion VerDetalleHabitacionesAjax(int IdHab){
-        ViewBag.ListaSeries  = BD.VerHabitaciones(IdHab);
+    public Habitacion VerDetalleHabitacionesAjax(int IdHab){
+        ViewBag.ListaSeries  = BD.BuscarReserva(IdHab);
         return ViewBag.ListaSeries;
+    }
+
+    [HttpPost]
+    public IActionResult GuardarModificacionReserva(Reserva res)
+    {
+        BD.Modificar(res);
+        return View("ModificarReserva");
     }
 
     [HttpPost]
